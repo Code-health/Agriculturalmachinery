@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp" >
+
+            <ImageView
+                android:id="@+id/imag_bank"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingBottom="11dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingTop="11dp"
+                android:src="@drawable/backss" />
+
+            <TextView
+                android:id="@+id/names"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="作业统计"
+                android:textColor="#585b67"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/mine"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/date"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#f4f6ff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="农机编号"
+            android:textColor="#585b67" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:text="机主"
+            android:textColor="#585b67" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="作业面积"
+            android:textColor="#585b67" />
+
+        <TextView
+            android:id="@+id/ddp"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="合格率"
+            android:textColor="#585b67" 
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <io.jchat.android.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/daywork"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutAnimation="@anim/list_anim_layout"
+        android:smoothScrollbar="true" />
+
+</LinearLayout>

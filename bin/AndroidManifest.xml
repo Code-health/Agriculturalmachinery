@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lnpdit.agriculturalmachinery"
+    android:versionCode="25"
+    android:versionName="1.4.9" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="20" />
+
+    <permission
+        android:name="com.lnpdit.agriculturalmachinery.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_ATORAGE" />
+    <!-- Required 一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.lnpdit.agriculturalmachinery.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- JMessage Demo required for record audio -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 获取网络状态 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 网络通信 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 获取设备信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取MAC地址 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读写sdcard，storage等等 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 允许程序录制音频 -->
+
+
+    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <!-- TODO replace above two with next line after Android 4.2 -->
+    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <!-- This excludes Google TV, which is unfortunately included by virtue of not requiring a camera -->
+    <uses-feature android:name="android.hardware.touchscreen" />
+    <!-- TODO make this not required again after android.hardware.camera.any is available -->
+
+    <application
+        android:name="io.jchat.android.application.JChatDemoApplication"
+        android:allowBackup="true"
+        android:configChanges="fontScale"
+        android:icon="@drawable/icon2"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/noTitle" >
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="24189d4c40bbc210b77e2a584d640f09" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58afce0daed1793e8a000fd7" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="0408777def01a86ad24b2b03142c4744" >
+        </meta-data>
+        <!--
+             <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="umeng" />
+        -->
+
+
+        <!-- Required Push SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- Required Push SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.lnpdit.agriculturalmachinery" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.ztiany2011.simplezxing.CaptureActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+
+        <!-- Required Push SDK核心功能 -->
+        <activity
+            android:name="io.jchat.android.newactivity.SignActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.InitActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.NewMainActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.NumOperFarmActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.NumOperFarmAdditionalActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        
+        <activity
+            android:name="io.jchat.android.newactivity.AddCooperationActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.EorrNoticeActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.NcooperativeActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.AddFarmMachineryActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <!--
+             <activity android:name="com.google.zxing.client.android.CaptureActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        -->
+        <activity
+            android:name="io.jchat.android.newactivity.AddFarmMachiney"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.MineSelfActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.CameasActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+         <activity
+            android:name="io.jchat.android.newactivity.CooperativeActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.CooperativeActivity1"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.NongjisuoActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.AddressNameActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.SettingAreaActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.MessageFeedbackActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.ChangePasswordActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.DayWorkActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.TownshipActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.CountyActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.SettingWorkAreaActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.DayWorkMaps"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.Shujiceshi"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.UploadPictureActivityOne"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.UploadPictureActivitySensorOne"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.newactivity.UploadPictureActivitySensortwo"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="io.jchat.android.newactivity.UploadPictureActivitySensorthree"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="io.jchat.android.newactivity.UploadPictureActivitySensorfour"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="io.jchat.android.newactivity.OperatorFarmActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+         <activity
+            android:name="io.jchat.android.newactivity.OperatorFarmAdditionalActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.lnpdit.agriculturalmachinery" />
+            </intent-filter>
+        </activity>
+        <!-- Required Push SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+        <!-- Required Push SDK核心功能 -->
+        <service
+            android:name="io.jchat.android.http.Waringservice"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- IM Required IM SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.im.android.helpers.IMReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cn.jpush.im.android.action.IM_RESPONSE" />
+                <action android:name="cn.jpush.im.android.action.NOTIFICATION_CLICK_PROXY" />
+
+                <category android:name="com.lnpdit.agriculturalmachinery" />
+            </intent-filter>
+        </receiver>
+
+        <!-- option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.lnpdit.agriculturalmachinery" />
+            </intent-filter>
+        </service>
+
+        <!-- Required. Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="1fd31356d6757ff733b0c917" /> <!-- </>值来自开发者平台取得的AppKey -->
+
+        <activity
+            android:name="io.jchat.android.activity.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.jchat.android.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/noTitle"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="io.jchat.android.activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="io.jchat.android.activity.RegisterActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="io.jchat.android.activity.MeInfoActivity" />
+        <activity
+            android:name="io.jchat.android.chatting.ChatActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="io.jchat.android.activity.ReloginActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity android:name="io.jchat.android.activity.ChatDetailActivity" />
+        <activity
+            android:name="io.jchat.android.activity.GroupSettingActivity"
+            android:theme="@style/group_setting_dialog" />
+        <activity android:name="io.jchat.android.activity.FriendInfoActivity" />
+        <activity android:name="io.jchat.android.activity.CreateGroupActivity" />
+        <activity android:name="io.jchat.android.activity.PickPictureTotalActivity" />
+        <activity android:name="io.jchat.android.activity.PickPictureActivity" />
+        <activity android:name="io.jchat.android.activity.BrowserViewPagerActivity" />
+        <activity android:name="io.jchat.android.activity.SettingActivity" />
+        <activity android:name="io.jchat.android.activity.NotificationSettingActivity" />
+        <activity android:name="io.jchat.android.activity.DisturbSettingActivity" />
+        <activity
+            android:name="io.jchat.android.activity.ResetPasswordActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name="io.jchat.android.activity.FixProfileActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name="io.jchat.android.activity.ResetNickNameActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name="io.jchat.android.activity.SelectAreaActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity
+            android:name="io.jchat.android.activity.EditSignatureActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+        <activity android:name="io.jchat.android.activity.EditNoteNameActivity" />
+        <activity android:name="io.jchat.android.activity.AboutActivity" />
+        <activity
+            android:name="io.jchat.android.activity.SelectFriendActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="io.jchat.android.activity.MembersInChatActivity" />
+        <activity android:name="io.jchat.android.activity.CropImageActivity" />
+        <activity
+            android:name="io.jchat.android.activity.ContactsActivity"
+            android:windowSoftInputMode="adjustResize" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="通讯录列表页" />
+        </activity>
+        <activity
+            android:name="io.jchat.android.activity.CooperativesActivity"
+            android:windowSoftInputMode="adjustResize" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="合作社页" />
+        </activity>
+        <activity
+            android:name="io.jchat.android.activity.TractorInfoActivity"
+            android:windowSoftInputMode="adjustResize" >
+            <meta-data
+                android:name="DESCRIPTION"
+                android:value="拖拉机页" />
+        </activity>
+        <activity
+            android:name="io.jchat.android.activity.NowtimeMapActivity"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+
+        <NumberPicker
+            android:id="@+id/np_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:layout_alignParentBottom="true"/>
+
+        
+
+        <NumberPicker
+            android:id="@+id/np_month"
+            android:layout_width="60.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip" 
+            android:visibility="gone"/>
+<!--  <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="-"
+            android:textSize="20.0sp" />-->
+        
+
+        <NumberPicker
+            android:id="@+id/np_day"
+            android:layout_width="60.0dip"
+            android:layout_marginLeft="5.0dip" 
+            android:layout_height="wrap_content" 
+            android:visibility="gone"/>
+
+</RelativeLayout>

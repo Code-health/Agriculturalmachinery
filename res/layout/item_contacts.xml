@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" >
+
+            <io.jchat.android.utils.XCRoundImageView
+                android:id="@+id/expert_headpic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/user_none" />
+
+            <TextView
+                android:id="@+id/attention_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/expert_headpic" 
+                android:textColor="@color/deep_yellow"
+                android:background="@drawable/buttonstyle"
+            android:textSize="14dp"
+                android:text="关注ta"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" >
+
+            <TextView
+                android:id="@+id/expert_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="京城81号"
+                android:textColor="@color/deep_yellow"
+                android:textSize="16dp" />
+           <TextView
+            android:id="@+id/zbj_text"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/expert_name"
+            android:layout_alignBottom="@+id/expert_name"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="的直播间"
+            android:textColor="#666666"
+            android:textSize="14dp"/>
+  <TextView
+            android:id="@+id/living_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="直播中..."
+            android:textStyle="italic"
+            android:textColor="#000000"
+            android:textSize="13dp"/>
+  
+            <TextView
+                android:id="@+id/expert_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expert_name"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="中短线狙击手，实战派高手"
+                android:textColor="#999999"
+                android:textSize="13dp" />
+            <TextView
+                android:id="@+id/expert_rewardmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/expert_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="赞：4234"
+                android:textColor="@color/deep_yellow"
+                android:textSize="13dp" />
+        
+             <TextView
+                android:id="@+id/expert_LiveCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/expert_rewardmark"
+                android:layout_below="@+id/expert_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="解答333个网友提问"
+                android:textColor="@color/deep_yellow"
+                android:textSize="13dp" />
+          <TextView
+            android:id="@+id/watching_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/expert_LiveCount"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="Cc直播>>"
+            android:textStyle="italic"
+            android:textColor="@color/yellow"
+            android:textSize="14dp" />
+            </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#EEEEEE" />
+
+</LinearLayout>

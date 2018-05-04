@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#fefeff" >
+
+        <ImageView
+            android:id="@+id/mune"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:padding="13dp"
+            android:src="@drawable/mune" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="农机作业监测"
+            android:textColor="#585b67"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_title"
+            android:src="@drawable/up"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horsview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#fefeff"
+        android:gravity="center_vertical"
+        android:scrollbars="none" >
+
+        <RadioGroup
+            android:id="@+id/rgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:clipChildren="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+             >
+
+            <RelativeLayout
+                android:id="@+id/work5"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:clipChildren="false" >
+
+                <TextView
+                    android:id="@+id/work_tv5"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_horizontal"
+                    android:text="深松作业"
+                    android:textColor="#108bf9"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/workv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="32dp"
+                    android:background="#108bf9" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/work6"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:clipChildren="false" >
+
+                <TextView
+                    android:id="@+id/work_tv6"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_horizontal"
+                    android:text="水田深翻"
+                    android:textColor="#aaafc3"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/workv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="32dp"
+                    android:background="#00108bf9" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/work7"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:clipChildren="false" >
+
+                <TextView
+                    android:id="@+id/work_tv7"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_horizontal"
+                    android:text="秸秆还田"
+                    android:textColor="#aaafc3"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/workv7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="32dp"
+                    android:background="#00108bf9" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/work8"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:clipChildren="false" >
+
+                <TextView
+                    android:id="@+id/work_tv8"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_horizontal"
+                    android:text="免耕播种"
+                    android:textColor="#aaafc3"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/workv8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="32dp"
+                    android:background="#00108bf9" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/work9"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:clipChildren="false" >
+
+                <TextView
+                    android:id="@+id/work_tv9"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_horizontal"
+                    android:text="植保作业"
+                    android:textColor="#aaafc3"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/workv9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="32dp"
+                    android:background="#00108bf9" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/worka"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:clipChildren="false" >
+
+                <TextView
+                    android:id="@+id/work_tva"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_horizontal"
+                    android:text="收获作业"
+                    android:textColor="#aaafc3"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/workva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="32dp"
+                    android:background="#00108bf9" />
+            </RelativeLayout>
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#fefeff"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/areaicon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="7dp"
+                android:gravity="center"
+                android:text="作业面积"
+                android:textColor="#585b67" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/f_lin"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_weight="3" >
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/area"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="2300"
+                    android:textColor="#585b67" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/area_mu_z"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="总作业面积"
+                android:textColor="#585b67" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0dp"
+                    android:src="@drawable/location" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:text=""
+                android:textColor="#585b67" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/re_weizhi"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3.5" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="0dp"
+                        android:layout_height="15dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/dw_re"
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/dinwei"
+                            android:layout_width="10dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/location" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="18dp"
+                    android:progressDrawable="@drawable/progressbars" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/mubiao1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0.00"
+                android:textColor="#585b67" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="#dddddd" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="目标作业面积: "
+                android:textColor="#585b67" />
+
+            <TextView
+                android:id="@+id/mubiao"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="0.00"
+                android:textColor="#585b67" />
+            <TextView
+                android:id="@+id/sett"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="未设置"
+                android:textColor="#108bf9"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="昨日作业面积: "
+                android:textColor="#585b67" />
+
+            <TextView
+                android:id="@+id/yesdayarea"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="0.00"
+                android:textColor="#585b67" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#fefeff"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/mileage" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="7dp"
+                android:gravity="center"
+                android:text="作业总里程"
+                android:textColor="#585b67" />
+
+            <TextView
+                android:id="@+id/worklin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:text="0.00KM"
+                android:textColor="#585b67"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_lic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/licheng"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#fefeff"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/agricultural" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="7dp"
+                android:gravity="center"
+                android:text="农机台数"
+                android:textColor="#585b67" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="1台"
+            android:textColor="#585b67"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+</LinearLayout>

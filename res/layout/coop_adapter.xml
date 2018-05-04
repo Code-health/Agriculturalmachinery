@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1.2" >
+
+        <TextView
+            android:id="@+id/marks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0m³"
+            android:textColor="#222222"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/today"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="今日作业面积"
+            android:textColor="#222222" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/names"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="0.8"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#222222" />
+
+    <TextView
+        android:id="@+id/nums"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="0.8"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#222222" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="0.3"
+        android:paddingTop="23dp"
+        android:paddingBottom="23dp"
+        android:src="@drawable/right" />
+
+</LinearLayout>

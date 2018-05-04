@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#fefeff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp" >
+
+        <ImageView
+            android:id="@+id/nt_bank"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="10dp"
+            android:padding="17dp"
+            android:src="@drawable/backss"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="作业位置"
+            android:textColor="#585b67"
+            android:gravity="center"
+            android:textSize="19dp" />
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="2dp"
+            android:background="#999999"/>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/ntm_wv"
+        android:layout_width="match_parent"
+        android:background="@drawable/logbank"
+        android:padding="2dp"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#33ffffff" >
+
+        <ImageView
+            android:id="@+id/bank"
+            android:layout_width="70dp"
+            android:layout_height="55dp"
+            android:padding="18dp"
+            android:src="@drawable/backss" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="目标作业面积"
+            android:textColor="#585858"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#eeeeee" />
+
+    <LinearLayout
+        android:id="@+id/work1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="9"
+            android:gravity="center_vertical"
+            android:text="深松作业目标作业面积"
+            android:textColor="#585858"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:padding="11dp"
+            android:src="@drawable/right" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#eeeeff" />
+
+    <LinearLayout
+        android:id="@+id/work2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="9"
+            android:gravity="center_vertical"
+            android:text="免耕播种目标作业面积"
+            android:textColor="#585858"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:padding="11dp"
+            android:src="@drawable/right" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#eeeeff" />
+
+    <LinearLayout
+        android:id="@+id/work3"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="9"
+            android:gravity="center_vertical"
+            android:text="秸秆还田目标作业面积"
+            android:textColor="#585858"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:padding="11dp"
+            android:src="@drawable/right" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v3"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#eeeeff" />
+
+    <LinearLayout
+        android:id="@+id/work4"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="9"
+            android:gravity="center_vertical"
+            android:text="水田深翻目标作业面积"
+            android:textColor="#585858"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:padding="11dp"
+            android:src="@drawable/right" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v4"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#eeeeff" />
+    
+      <LinearLayout
+        android:id="@+id/work5"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="9"
+            android:gravity="center_vertical"
+            android:text="水田深翻目标作业面积"
+            android:textColor="#585858"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:padding="11dp"
+            android:src="@drawable/right" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v5"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#eeeeff" />
+    
+      <LinearLayout
+        android:id="@+id/work6"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="9"
+            android:gravity="center_vertical"
+            android:text="水田深翻目标作业面积"
+            android:textColor="#585858"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:padding="11dp"
+            android:src="@drawable/right" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v6"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#eeeeff" />
+
+</LinearLayout>

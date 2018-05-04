@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PercentageRing">
+        <attr name="radius" format="integer"/>
+        <attr name="circleBackground" format="color"/>
+        <attr name="ringColor" format="color"/>
+        <attr name="textColor" format = "color"/>
+        <attr name="textIsDisplayable" format ="boolean"/>
+        <attr name="roundWidth" format = "integer"/>
+        <attr name="textSize" format = "integer"/>
+        <attr name="style" format = "integer"/>
+
+    </declare-styleable>
+</resources>

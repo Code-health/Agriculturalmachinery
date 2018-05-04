@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/childLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="horizontal" >
+<ImageView
+    android:id="@+id/icon_img"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_centerVertical="true"
+    android:layout_alignParentLeft="true"
+    android:background="@drawable/icon_left"/>
+    <TextView
+        android:id="@+id/textchild1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/icon_img"
+        android:layout_marginTop="10dp"
+        android:text="合作社名称"
+        android:textColor="@color/item_f"
+        android:textSize="13dp" />
+<TextView
+        android:id="@+id/textchild2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_alignBottom="@+id/textchild1"
+        android:text="总作业面积:100㎡"
+        android:textColor="@color/item_f"
+        android:textSize="13dp" />
+<TextView
+        android:id="@+id/textchild3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textchild1"
+        android:layout_alignLeft="@+id/textchild1"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        android:text="农机数量:20"
+        android:textColor="@color/item_f"
+        android:textSize="13dp" />
+
+<ImageView
+    android:id="@+id/next_img"
+    android:layout_width="16dp"
+    android:layout_height="16dp"
+    android:layout_alignBottom="@+id/textchild3"
+    android:layout_marginRight="10dp"
+    android:layout_alignParentRight="true"
+    android:background="@drawable/next_img"/>
+<TextView
+        android:id="@+id/textchild4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textchild3"
+        android:layout_toLeftOf="@+id/next_img"
+        android:layout_marginRight="5dp"
+        android:text="昨日作业总面积:20㎡"
+        android:textColor="@color/item_s"
+        android:textSize="13dp" />
+</RelativeLayout>

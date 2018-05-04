@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp" >
+
+        <ImageView
+            android:id="@+id/bank"
+            android:layout_width="70dp"
+            android:layout_height="55dp"
+            android:padding="18dp"
+            android:src="@drawable/backss" />
+
+        <TextView
+            android:id="@+id/toptime"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center"
+            android:text="地块名"
+            android:textColor="#585b67"
+            android:textSize="21sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#f4f6ff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_one"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="市/县/区"
+            android:textColor="#585b67" />
+
+        <TextView
+            android:id="@+id/tv_two"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="乡/镇/街/社区"
+            android:textColor="#585b67" />
+
+        <TextView
+            android:id="@+id/tv_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="村/屯"
+            android:textColor="#585b67" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_lists"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/lv_shi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/lv_xiang"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/lv_cun"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+        </ListView>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/di_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:hint="请输入地块名"
+        android:textColorHint="#c9d0d6"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/liner_re"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal" 
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/re_election"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="重新选择"
+            android:textColor="#108bf9"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="0dp"
+             android:layout_weight="1"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="确认提交"
+            android:textColor="#108bf9"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/go"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="确认"
+        android:textColor="#108bf9"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</LinearLayout>

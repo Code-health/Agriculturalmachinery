@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        android:clipChildren="false"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/bank"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:src="@drawable/backss" />
+            
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="报警信息"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/souright"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F8F8FF"
+        android:clipChildren="false" >
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="-25dp"
+            android:background="@drawable/buttonbankgroundyuan"
+            android:gravity="center"
+            android:text="***"
+            android:textColor="#444444"
+            android:textSize="15sp" 
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/not_zhu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="2dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="25dp"
+            android:paddingTop="20dp"
+            android:text="报警信息"
+            android:textColor="#444444"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="#FAFFF0" >
+
+        <io.jchat.android.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/notice_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:dividerHeight="5dp"
+            android:layoutAnimation="@anim/list_anim_layout"
+            android:smoothScrollbar="true" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:dividerHeight="5dp"
+            android:layoutAnimation="@anim/list_anim_layout"
+            android:smoothScrollbar="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>
